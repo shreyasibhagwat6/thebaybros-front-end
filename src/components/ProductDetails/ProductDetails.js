@@ -1,11 +1,15 @@
 import React, { useParams, useState, useEffect } from 'react';
+import ImageSlider from '../ImageSlider/ImageSlider';
 import axios from 'axios';
+
 
 const ProductDetails = () => {
 
     const [product, setProduct] = useState('');
-    // const { productId } = useParams();
-
+    const slides = [
+        { url: "http://localhost:8080/image/jeans_pants1.jpg", title: "beach" },
+        { url: "http://localhost:8080/image/jeans_pants2.jpg", title: "boat" },
+    ]
 
     useEffect(()=>{
         axios
@@ -19,13 +23,16 @@ const ProductDetails = () => {
             })
     }, [])
 
-    console.log(product)
+    const containerStyles = {
+        width: "500px",
+        height: "280px",
+        margin: "0 auto",
+      };
 
-    return(
+    return (
         <div>
-            <div>
-                <img src={'http://localhost:8080/image/jeans_pants1.jpg'}></img>
-                <img src={'http://localhost:8080/image/jeans_pants2.jpg'}></img>
+             <div style={containerStyles}>
+                <ImageSlider slides={slides} />
             </div>
             <div>
                 <h3>{product.product_brand}</h3>
@@ -45,9 +52,9 @@ const ProductDetails = () => {
             <div>
                 {product.product_details}
             </div>
-            <p>Style Code: {product.product_code}</p>    
+            <p>Style Code: {product.product_code}</p>
         </div>
     )
-}
+};
 
 export default ProductDetails;
