@@ -4,7 +4,8 @@ const slideStyles = {
   width: "100%",
   height: "100%",
   borderRadius: "10px",
-  backgroundSize: "cover",
+  backgroundSize: "contain",
+  backgroundRepeat: 'no-repeat',
   backgroundPosition: "center",
 };
 
