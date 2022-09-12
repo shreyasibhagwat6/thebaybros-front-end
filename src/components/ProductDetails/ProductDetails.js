@@ -1,5 +1,6 @@
 import React, { useParams, useState, useEffect } from 'react';
 import ImageSlider from '../ImageSlider/ImageSlider';
+import './ProductDetails.scss';
 import axios from 'axios';
 
 
@@ -41,9 +42,11 @@ const ProductDetails = () => {
             </div>
             <div>
                 <p>Size</p>
-                <div>
-                    <div>4</div>
-                    <div>6</div>
+                <div className='size'>
+                    <div className='size__num'>4</div>
+                    <div className='size__num'>6</div>
+                    <div className='size__num'>8</div>
+                    <div className='size__num'>10</div>
                 </div>
             </div>
             <div>
