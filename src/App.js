@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import './App.css';
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
@@ -16,6 +17,21 @@ function App() {
       </BrowserRouter>
     </div>
   );
+=======
+import "./App.scss";
+import React from "react";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+import Home from "./pages/Home/Home";
+
+function App() {
+    return (
+        <BrowserRouter>
+            <Switch>
+                <Route path="/" exact component={Home}></Route>
+            </Switch>
+        </BrowserRouter>
+    );
+>>>>>>> main
 }
 
 export default App;
