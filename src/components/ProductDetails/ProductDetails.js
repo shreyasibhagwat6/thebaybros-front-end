@@ -5,7 +5,6 @@ import ImageSlider from '../ImageSlider/ImageSlider';
 import './ProductDetails.scss';
 import axios from 'axios';
 
-
 const ProductDetails = () => {
 
     const [product, setProduct] = useState('');
@@ -72,12 +71,6 @@ const ProductDetails = () => {
             </div>
             <p>Style Code: {product.product_code}</p>
             <>
-      {/* {values.map((v, idx) => (
-        <Button key={idx} className="me-2 mb-2" onClick={() => handleShow(v)}>
-          Full screen
-          {typeof v === 'string' && `below ${v.split('-')[0]}`}
-        </Button>
-      ))} */}
       <Modal show={show} fullscreen={fullscreen} onHide={() => setShow(false)}>
         <Modal.Header closeButton>
           <Modal.Title>Size Guide</Modal.Title>
@@ -86,12 +79,17 @@ const ProductDetails = () => {
             <h4>Free People</h4>
             <p>Category: Denim</p>
             <div className='measure'>
-                <p className='measure__cont'>Inches</p>
+                <p className='measure__cont--inch'>Inches</p>
                 <p className='measure__cont'>Centimeters</p>
+            </div>
+            <div className='size__container'>
+                <div className='size__title'>US/Canadian Sizing</div>
+                <svg className='size__arrow' xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white" class="bi bi-chevron-compact-up" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M7.776 5.553a.5.5 0 0 1 .448 0l6 3a.5.5 0 1 1-.448.894L8 6.56 2.224 9.447a.5.5 0 1 1-.448-.894l6-3z"/>
+                </svg>
             </div>
             <Table striped bordered hover>
                 <thead>
-                    <tr>US/Canadian Sizing</tr>
                     <tr>
                         <th>Size</th>
                         <th>Inseam</th>
@@ -148,11 +146,14 @@ const ProductDetails = () => {
                         <td>30.5</td>
                         <td>41.5</td>
                     </tr>
-                    <tr>
-                    UK Sizing
-                    </tr>
                 </tbody>
             </Table>
+            <div className='size__container'>
+                <div className='size__title'>UK Sizing</div>
+                <svg className='size__arrow' xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white" class="bi bi-chevron-compact-down" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M1.553 6.776a.5.5 0 0 1 .67-.223L8 9.44l5.776-2.888a.5.5 0 1 1 .448.894l-6 3a.5.5 0 0 1-.448 0l-6-3a.5.5 0 0 1-.223-.67z"/>
+                </svg>
+            </div>
         </Modal.Body>
       </Modal>
     </>

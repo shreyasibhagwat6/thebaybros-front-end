@@ -20,6 +20,25 @@ body{
         // justify-content: space-around;
         text-align: center;
     }
+
+    &__title {
+        flex: 50;
+        color: white;
+        padding: 0.5rem;
+    } 
+    
+    &__container {
+        display: flex;
+        background-color: #51619C;
+        border-radius: 0.5rem;
+    }
+
+    &__arrow {
+        height: 3rem;
+        color: white;
+        width: 2rem;
+        padding: 1rem;
+    }
 }
 
 .measure{
@@ -30,5 +49,12 @@ body{
     &__cont {
         flex: 20;
         text-align: center;
+
+        &--inch{
+            border-bottom: 2px solid #51619C;
+        }
     }
+
+
 }
+
