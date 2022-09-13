@@ -1,0 +1,32 @@
+body{
+    margin: 1rem;
+}
+
+.size {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    &__num {
+        flex: 50;
+        border: solid black;
+        text-align: center;
+    }
+
+    &__text{
+        display: flex;
+        justify-content: space-around;
+    }
+}
+
+.measure{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__cont {
+        flex: 20;
+        text-align: center;
+    }
+}
