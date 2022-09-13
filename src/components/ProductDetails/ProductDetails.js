@@ -55,7 +55,7 @@ const ProductDetails = () => {
             <div>
                 <div className='size'>
                     <p className= 'size__text'>Size</p>
-                    <p className="me-2 mb-2" onClick={() => handleShow()}>Size Guide</p>
+                    <p className="size__text" onClick={() => handleShow()}>Size Guide</p>
                 </div>
                 <div className='size'>
                     <div className='size__num'>4</div>
