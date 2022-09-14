@@ -208,6 +208,20 @@
     &__text {
         color: white;
     }
+
+    &__sort-flex {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 1.5rem;
+    }
+
+    &__modal-sort {
+        margin: 0.5rem 1rem 0 0.5rem;
+    }
+
+    &__radiobtn {
+        width: 1.5rem;
+    }
 }
 
 .modal-header {
@@ -217,4 +231,11 @@
 
 .modal-header .btn-close {
     margin-left: 0 !important;
+}
+
+.modal-header .modal-title {
+    flex: 1% !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
 }
