@@ -3,6 +3,8 @@ import React, { useState, useEffect } from "react";
 import Cards from "../../components/Cards/Cards";
 import axios from "axios";
 import { PRODUCTS_API } from "../../Utilities/api_links";
+import Header from "../../components/Header/Header";
+import { carouselImages } from "../../Utilities/carouselImages";
 
 const Home = () => {
     const [products, setProducts] = useState([]);
@@ -15,7 +17,6 @@ const Home = () => {
         await axios
             .get(PRODUCTS_API)
             .then((res) => {
-                // console.log(res.data);
                 setProducts(res.data);
             })
             .catch((error) => {
@@ -27,7 +28,19 @@ const Home = () => {
 
     return (
         <div className="home">
-            <h4 className="home__heading">Women's Pants & Leggings</h4>
+            <Header />
+            <div className="home__carousel">
+                {carouselImages.map((image, index) => {
+                    return (
+                        <img
+                            key={index}
+                            className="home__image"
+                            src={image.image}
+                            alt="clothing categories"
+                        />
+                    );
+                })}
+            </div>
             {products.map((product) => {
                 return (
                     <Cards

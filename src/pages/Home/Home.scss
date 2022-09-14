@@ -1,0 +1,13 @@
+.home {
+    &__carousel {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__image {
+        width: 70%;
+        height: 70%;
+        margin-right: 5px;
+        margin-top: 10px;
+    }
+}

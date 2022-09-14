@@ -1,0 +1,220 @@
+.header {
+    &__title {
+        display: flex;
+        justify-content: space-around;
+        border-bottom: 1px solid #686868;
+    }
+
+    &__heading {
+        font-weight: 700;
+    }
+
+    &__info {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    &__filter {
+        border: none;
+        background-color: white;
+    }
+
+    &__modal-price {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__modal-colors {
+        margin-top: 2rem;
+    }
+
+    &__colors {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    &__colorBorder-0 {
+        border: 1px solid #00284c;
+        border-radius: 50%;
+        padding: 5px;
+        margin-right: 5px;
+    }
+
+    &__colorBorder-1 {
+        border: 1px solid #00284c;
+        border-radius: 50%;
+        padding: 5px;
+        margin-right: 5px;
+    }
+
+    &__colorBorder-2 {
+        border: 1px solid #00284c;
+        border-radius: 50%;
+        padding: 5px;
+        margin-right: 5px;
+    }
+
+    &__colorBorder-3 {
+        border: 1px solid white;
+        border-radius: 50%;
+        padding: 5px;
+        margin-right: 5px;
+    }
+
+    &__colorBorder-4 {
+        border: 1px solid white;
+        border-radius: 50%;
+        padding: 5px;
+        margin-right: 5px;
+    }
+
+    &__colorBorder-5 {
+        border: 1px solid white;
+        border-radius: 50%;
+        padding: 5px;
+    }
+
+    &__color-0 {
+        background-color: black;
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: 50%;
+    }
+
+    &__color-1 {
+        background-color: lightgray;
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: 50%;
+    }
+    &__color-2 {
+        background-color: #00284c;
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: 50%;
+    }
+    &__color-3 {
+        background-color: #e4c8a3;
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: 50%;
+    }
+
+    &__color-4 {
+        background-color: #00704a;
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: 50%;
+    }
+
+    &__color-5 {
+        background-color: #b40838;
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: 50%;
+    }
+
+    &__sizes {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    &__size {
+        border: 1px solid #686868;
+        padding: 8px;
+        border-radius: 5px;
+    }
+
+    &__size-2 {
+        border: 1px solid #00284c;
+        background-color: #00284c;
+        color: white;
+        padding: 8px;
+        border-radius: 5px;
+    }
+
+    &__fits {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    &__fit {
+        border: 1px solid #686868;
+        padding: 8px 28px;
+        border-radius: 5px;
+    }
+
+    &__fit-0 {
+        border: 1px solid #00284c;
+        background-color: #00284c;
+        color: white;
+        padding: 8px;
+        border-radius: 5px;
+    }
+
+    &__materials {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__material {
+        border: 1px solid #686868;
+        padding: 8px 15px;
+        margin-right: 9px;
+        border-radius: 5px;
+    }
+
+    &__material-1 {
+        border: 1px solid #00284c;
+        background-color: #00284c;
+        color: white;
+        padding: 8px;
+        border-radius: 5px;
+    }
+
+    &__brands {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__brand {
+        border: 1px solid #686868;
+        padding: 8px 10px;
+        margin-right: 8px;
+        border-radius: 5px;
+    }
+
+    &__brand-5 {
+        border: 1px solid #00284c;
+        background-color: #00284c;
+        color: white;
+        padding: 8px;
+        border-radius: 5px;
+    }
+
+    &__sort {
+        border: none;
+        background-color: white;
+        border-left: 1px solid #686868;
+    }
+
+    &__black-bar {
+        background-color: black;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    &__text {
+        color: white;
+    }
+}
+
+.modal-header {
+    width: 100%;
+    flex-direction: row-reverse;
+}
+
+.modal-header .btn-close {
+    margin-left: 0 !important;
+}
