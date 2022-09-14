@@ -107,21 +107,23 @@ const ProductDetails = () => {
                 </div>
             </div>
             <div>
-                <h5>Quantity</h5>
-                <div>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-dash" viewBox="0 0 16 16">
+                <h5 className='qty__title'>Quantity</h5>
+                <div className='qty'>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-dash" viewBox="0 0 10 10">
                         <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"/>
                     </svg>
-                    <div>1</div>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
+                    <div className='qty__item'>1</div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus" viewBox="0 0 10 10">
                         <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
                     </svg>
                 </div>
             </div>
-            <div>
-                <p>Shipping and Pickup</p>
+            <div className='deliver'>
+                <h5>Shipping and Pickup</h5>
+                <div className='deliver__ship'>Ship it</div>
+                <div className='deliver__pickup'>Free Pickup in Store</div>
             </div>
-            <div>
+            <div className='details'>
                 <h5>Details</h5>
                 <p>New from We The Free Collection, these vintage-inspired jeans are the perfect addition to your closet. With a rugged finish, they feature oversized side pockets and a raw-edge distressed hem, giving them a retro feel.</p>
                 <ul>

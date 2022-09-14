@@ -1,12 +1,11 @@
 body{
-    margin: 1rem 2rem;
+    padding: 1rem 1.5rem;
 }
 
 .size {
     display: flex;
     justify-content: center;
     align-items: center;
-    // flex-wrap: nowrap;
 
     &__num {
         flex: 50;
@@ -17,7 +16,6 @@ body{
     &__text{
         display: flex;
         flex: 50;
-        // justify-content: space-around;
         text-align: center;
     }
 
@@ -60,10 +58,11 @@ body{
     display: flex;
     background-color: black;
     color: white;
-    width: 100%;
+    width: 90%;
     height: 3rem;
     padding: 0.3rem;
     border-radius: 0.5rem;
+    margin: 0 auto;
 
     &__num{
         flex: 20;
@@ -71,7 +70,6 @@ body{
 
     &__star{
         flex: 50;
-        // border-right: solid 2px white;
     }
 }
 
@@ -95,11 +93,53 @@ body{
 }
 
 .bag{
-    width: 80%;
     background-color: black;
     color: white;
     padding: 1rem;
     border: black;
-    // margin: 0 aut;
+    width: 80%;
+    height: 3rem;
+    padding: 0.3rem;
+    border-radius: 0.5rem;
+    margin: 1.8rem;
+    
+}
+
+.qty{
+    display: flex;
+
+    &__title{
+        padding: 1rem 0;
+    }
+
+    &__item{
+        padding: 0 1rem;
+        border: 2px solid black;
+    }
+
+    &__plus {
+        width: 5rem;
+    }
+}
+
+.deliver{
+    padding-top: 1rem;
+    border-bottom: 2px solid #EBEBEB;
+
+    &__ship{
+        border: 2px solid #D8D8D8;
+        padding: 1rem 0.5rem;
+        margin-bottom: 1rem;
+    }
+
+    &__pickup{
+        border: 2px solid #D8D8D8;
+        padding: 1rem 0.5rem;
+        margin-bottom: 1.5rem;
+    }
+}
+
+.details{
+    padding: 1rem 0;
 }
 
