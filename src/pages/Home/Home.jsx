@@ -41,17 +41,19 @@ const Home = () => {
                     );
                 })}
             </div>
-            {products.map((product) => {
-                return (
-                    <Cards
-                        key={product.id}
-                        image={product.product_image}
-                        brand={product.product_brand}
-                        name={product.product_name}
-                        price={product.price}
-                    />
-                );
-            })}
+            <div className="home__cards">
+                {products.map((product) => {
+                    return (
+                        <Cards
+                            key={product.id}
+                            image={product.product_image}
+                            brand={product.product_brand}
+                            name={product.product_name}
+                            price={product.price}
+                        />
+                    );
+                })}
+            </div>
         </div>
     );
 };

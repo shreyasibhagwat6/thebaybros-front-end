@@ -9,6 +9,8 @@ import Footer from "../Footer/Footer";
 const Header = () => {
     const [fullscreen, setFullscreen] = useState(true);
     const [show, setShow] = useState(false);
+    const [full, setFull] = useState(true);
+    const [showModal, setShowModal] = useState(false);
 
     const sizes = ["24", "25", "26", "27", "28", "29"];
     const fits = ["Petite", "True to Size", "Larger"];
@@ -36,6 +38,10 @@ const Header = () => {
         setFullscreen(breakpoint);
         setShow(true);
     }
+    function handleShowModal(breakpoint) {
+        setFull(breakpoint);
+        setShowModal(true);
+    }
 
     return (
         <>
@@ -51,7 +57,7 @@ const Header = () => {
                     }}
                     closeButton
                 >
-                    <Modal.Title>Filters</Modal.Title>
+                    <Modal.Title>FILTER</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
                     <p>Price Range</p>
@@ -147,6 +153,94 @@ const Header = () => {
                     <Footer />
                 </Modal.Body>
             </Modal>
+            <Modal
+                show={showModal}
+                fullscreen={full}
+                onHide={() => setShowModal(false)}
+                animation={false}
+            >
+                <Modal.Header
+                    style={{
+                        borderBottom: "1px solid #686868",
+                    }}
+                    closeButton
+                >
+                    <Modal.Title>SORT</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+                    <div className="header__modal-sort">
+                        <div className="header__sort-flex">
+                            <label htmlFor="sortFeature">Sort by Feature</label>
+                            <input
+                                className="header__radiobtn"
+                                type="radio"
+                                name="sortItem"
+                            />
+                        </div>
+                        <div className="header__sort-flex">
+                            <label htmlFor="sortSeller">
+                                Sort by Best Sellers
+                            </label>
+                            <input
+                                className="header__radiobtn"
+                                type="radio"
+                                name="sortItem"
+                            />
+                        </div>
+                        <div className="header__sort-flex">
+                            <label htmlFor="sortNew">Sort by Newest</label>
+                            <input
+                                className="header__radiobtn"
+                                type="radio"
+                                name="sortItem"
+                            />
+                        </div>
+                        <div className="header__sort-flex">
+                            <label htmlFor="sortPriceHighLow">
+                                Sort by Price High to Low
+                            </label>
+                            <input
+                                className="header__radiobtn"
+                                type="radio"
+                                name="sortItem"
+                            />
+                        </div>
+                        <div className="header__sort-flex">
+                            <label htmlFor="sortPriceLowHigh">
+                                Sort by Price Low to High
+                            </label>
+                            <input
+                                className="header__radiobtn"
+                                type="radio"
+                                name="sortItem"
+                            />
+                        </div>
+                        <div className="header__sort-flex">
+                            <label htmlFor="sortRated">Sort by Top Rated</label>
+                            <input
+                                className="header__radiobtn"
+                                type="radio"
+                                name="sortItem"
+                            />
+                        </div>
+                        <div className="header__sort-flex">
+                            <label htmlFor="sortFeature">Sort by Brand</label>
+                            <input
+                                className="header__radiobtn"
+                                type="radio"
+                                name="sortItem"
+                            />
+                        </div>
+                        <Button
+                            variant="dark"
+                            size="lg"
+                            style={{ width: "100%", marginBottom: "2rem" }}
+                        >
+                            SORT MY ITEMS
+                        </Button>
+                    </div>
+                </Modal.Body>
+            </Modal>
             <div className="header">
                 <div className="header__title">
                     {/* <IoIosArrowBack
@@ -163,7 +257,12 @@ const Header = () => {
                         <button className="header__filter" onClick={handleShow}>
                             Filter
                         </button>
-                        <button className="header__sort">Sort</button>
+                        <button
+                            className="header__sort"
+                            onClick={handleShowModal}
+                        >
+                            Sort
+                        </button>
                     </div>
                 </div>
                 <div className="header__black-bar">
