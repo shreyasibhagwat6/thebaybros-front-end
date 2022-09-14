@@ -10,4 +10,10 @@
         margin-right: 5px;
         margin-top: 10px;
     }
+
+    &__cards {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+    }
 }
