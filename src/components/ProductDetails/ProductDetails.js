@@ -19,8 +19,8 @@ const ProductDetails = () => {
     }
 
     const slides = [
-        { url: "http://localhost:8080/image/jeans_pants1.jpg", title: "beach" },
-        { url: "http://localhost:8080/image/jeans_pants2.jpg", title: "boat" },
+        { url: "http://localhost:8080/image/jeans_jeans1.jpg", title: "beach" },
+        { url: "http://localhost:8080/image/jeans_jeans2.jpg", title: "boat" },
     ]
 
     useEffect(()=>{
@@ -34,6 +34,10 @@ const ProductDetails = () => {
                 console.log(error)
             })
     }, [])
+
+    // const productArray = product.product_details.split(".");
+
+    // console.log(productArray);
 
     const containerStyles = {
         width: "500px",
@@ -51,25 +55,100 @@ const ProductDetails = () => {
                 <p>{product.product_name}</p>
                 <h4>${product.price}</h4>
             </div>
+            <div className='review'>
+                <div className='review__num'>4.1</div>
+                <div className='review__star'>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-star-fill" viewBox="0 0 16 16">
+                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-star-fill" viewBox="0 0 16 16">
+                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white"  class="bi bi-star-fill" viewBox="0 0 16 16">
+                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-star-fill" viewBox="0 0 16 16">
+                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill='#8B8B8C' class="bi bi-star" viewBox="0 0 16 16">
+                        <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"/>
+                    </svg>
+                </div>
+                <div className='review_text'>Write a review</div>
+            </div>
+            <div className='ship'>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-truck" viewBox="0 0 16 16">
+                    <path d="M0 3.5A1.5 1.5 0 0 1 1.5 2h9A1.5 1.5 0 0 1 12 3.5V5h1.02a1.5 1.5 0 0 1 1.17.563l1.481 1.85a1.5 1.5 0 0 1 .329.938V10.5a1.5 1.5 0 0 1-1.5 1.5H14a2 2 0 1 1-4 0H5a2 2 0 1 1-3.998-.085A1.5 1.5 0 0 1 0 10.5v-7zm1.294 7.456A1.999 1.999 0 0 1 4.732 11h5.536a2.01 2.01 0 0 1 .732-.732V3.5a.5.5 0 0 0-.5-.5h-9a.5.5 0 0 0-.5.5v7a.5.5 0 0 0 .294.456zM12 10a2 2 0 0 1 1.732 1h.768a.5.5 0 0 0 .5-.5V8.35a.5.5 0 0 0-.11-.312l-1.48-1.85A.5.5 0 0 0 13.02 6H12v4zm-9 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm9 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
+                </svg>
+                <div className='ship__text'>Free shipping on orders over $49 from The Bay</div>
+            </div>
+            <div>Get $50 in HB Rewards points when you spend $250+ or 4 interest-free payments of $49.50 bi-weekly. Learn More</div>
+            <div className='gift'>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-gift" viewBox="0 0 16 16">
+                    <path d="M3 2.5a2.5 2.5 0 0 1 5 0 2.5 2.5 0 0 1 5 0v.006c0 .07 0 .27-.038.494H15a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1v7.5a1.5 1.5 0 0 1-1.5 1.5h-11A1.5 1.5 0 0 1 1 14.5V7a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h2.038A2.968 2.968 0 0 1 3 2.506V2.5zm1.068.5H7v-.5a1.5 1.5 0 1 0-3 0c0 .085.002.274.045.43a.522.522 0 0 0 .023.07zM9 3h2.932a.56.56 0 0 0 .023-.07c.043-.156.045-.345.045-.43a1.5 1.5 0 0 0-3 0V3zM1 4v2h6V4H1zm8 0v2h6V4H9zm5 3H9v8h4.5a.5.5 0 0 0 .5-.5V7zm-7 8V7H2v7.5a.5.5 0 0 0 .5.5H7z"/>
+                </svg>
+                <div>Eligible for Gift Receipt</div>
+            </div>
+            <h5 className='colour'>Colour: THE WEST</h5>
             <div>
                 <div className='size'>
-                    <p className= 'size__text'>Size</p>
+                    <h5 className= 'size__text'>Size</h5>
                     <p className="size__text" onClick={() => handleShow()}>Size Guide</p>
                 </div>
                 <div className='size'>
-                    <div className='size__num'>4</div>
-                    <div className='size__num'>6</div>
-                    <div className='size__num'>8</div>
-                    <div className='size__num'>10</div>
+                    <div className='size__num'>24</div>
+                    <div className='size__num'>25</div>
+                    <div className='size__num'>26</div>
+                    <div className='size__num'>27</div>
+                    <div className='size__num'>28</div>
+                    <div className='size__num'>29</div>
+                    <div className='size__num'>30</div>
+                    <div className='size__num'>31</div>
+                </div>
+            </div>
+            <div>
+                <h5>Quantity</h5>
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-dash" viewBox="0 0 16 16">
+                        <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"/>
+                    </svg>
+                    <div>1</div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
+                        <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                    </svg>
                 </div>
             </div>
             <div>
                 <p>Shipping and Pickup</p>
             </div>
             <div>
-                {product.product_details}
+                <h5>Details</h5>
+                <p>New from We The Free Collection, these vintage-inspired jeans are the perfect addition to your closet. With a rugged finish, they feature oversized side pockets and a raw-edge distressed hem, giving them a retro feel.</p>
+                <ul>
+                    <li>Belt Loops</li>
+                    <li>Zip Fly</li>
+                    <li>Front Button Closure</li>
+                    <li>Side atch Pockets</li>
+                    <li>Raw Edge Hem</li>
+                    <li>Content: 100% Cotton</li>
+                    <li>Care: Machine Wash Regularly</li>
+                </ul>
+                <h5> Size and Fit</h5>
+                <ul>
+                    <li>Mid-Rise: Waistband sits between the hips and navel.</li>
+                    <li>Flared Leg: Opening around 21-27"</li>
+                    <li>Inseam: Around 32"</li>
+                    <li>Rise: 13"</li>
+                    <li>Leg: Flare 21-27"</li>
+                    <li>Length: 30"</li>
+                    <li>Inseam: 32"</li>
+                    <li>Stretch: Non-Stretch</li>
+                </ul>
+                <p>Model is 6'1"/185 cm wearing a size 27</p>
+                {/* {product.product_details.split(".")} */}
+                {/* {productArray[0]} */}
             </div>
-            <p>Style Code: {product.product_code}</p>
+            <button className='bag'>ADD TO BAG</button>
             <>
       <Modal show={show} fullscreen={fullscreen} onHide={() => setShow(false)}>
         <Modal.Header closeButton>
