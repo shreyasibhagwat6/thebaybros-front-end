@@ -3,6 +3,7 @@ import Modal from 'react-bootstrap/Modal';
 import Table from 'react-bootstrap/Table';
 import ImageSlider from '../ImageSlider/ImageSlider';
 import './ProductDetails.scss';
+import snip from '../../assets/images/snip.JPG'
 import axios from 'axios';
 
 const ProductDetails = () => {
@@ -95,6 +96,7 @@ const ProductDetails = () => {
                     <h5 className= 'size__text'>Size</h5>
                     <p className="size__text" onClick={() => handleShow()}>Size Guide</p>
                 </div>
+                <img className='snip' alt='' src={snip}></img>
                 <div className='size'>
                     <div className='size__num'>24</div>
                     <div className='size__num'>25</div>
