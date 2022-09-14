@@ -1,8 +1,10 @@
 import React, { useParams, useState, useEffect } from 'react';
 import Modal from 'react-bootstrap/Modal';
 import Table from 'react-bootstrap/Table';
+import Button from 'react-bootstrap/Button';
 import ImageSlider from '../ImageSlider/ImageSlider';
 import './ProductDetails.scss';
+import snip from '../../assets/images/snip.JPG'
 import axios from 'axios';
 
 const ProductDetails = () => {
@@ -10,6 +12,7 @@ const ProductDetails = () => {
     const [product, setProduct] = useState('');
     // const [modal, setModal] = useState(false);
     const [show, setShow] = useState(false);
+    const [bag, setBag] = useState(false);
     const values = [true];
     const [fullscreen, setFullscreen] = useState(true);
 
@@ -17,6 +20,10 @@ const ProductDetails = () => {
         setFullscreen(breakpoint);
         setShow(true);
     }
+
+    const handleBag = () => setBag(true);
+    const handleClose = () => setBag(false);
+    
 
     const slides = [
         { url: "http://localhost:8080/image/jeans_jeans1.jpg", title: "beach" },
@@ -95,6 +102,7 @@ const ProductDetails = () => {
                     <h5 className= 'size__text'>Size</h5>
                     <p className="size__text" onClick={() => handleShow()}>Size Guide</p>
                 </div>
+                <img className='snip' alt='' src={snip}></img>
                 <div className='size'>
                     <div className='size__num'>24</div>
                     <div className='size__num'>25</div>
@@ -107,21 +115,23 @@ const ProductDetails = () => {
                 </div>
             </div>
             <div>
-                <h5>Quantity</h5>
-                <div>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-dash" viewBox="0 0 16 16">
+                <h5 className='qty__title'>Quantity</h5>
+                <div className='qty'>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-dash" viewBox="0 0 10 10">
                         <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"/>
                     </svg>
-                    <div>1</div>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
+                    <div className='qty__item'>1</div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus" viewBox="0 0 10 10">
                         <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
                     </svg>
                 </div>
             </div>
-            <div>
-                <p>Shipping and Pickup</p>
+            <div className='deliver'>
+                <h5>Shipping and Pickup</h5>
+                <div className='deliver__ship'>Ship it</div>
+                <div className='deliver__pickup'>Free Pickup in Store</div>
             </div>
-            <div>
+            <div className='details'>
                 <h5>Details</h5>
                 <p>New from We The Free Collection, these vintage-inspired jeans are the perfect addition to your closet. With a rugged finish, they feature oversized side pockets and a raw-edge distressed hem, giving them a retro feel.</p>
                 <ul>
@@ -148,7 +158,7 @@ const ProductDetails = () => {
                 {/* {product.product_details.split(".")} */}
                 {/* {productArray[0]} */}
             </div>
-            <button className='bag'>ADD TO BAG</button>
+            <button onClick={handleBag} className='bag'>ADD TO BAG</button>
             <>
       <Modal show={show} fullscreen={fullscreen} onHide={() => setShow(false)}>
         <Modal.Header closeButton>
@@ -234,6 +244,28 @@ const ProductDetails = () => {
                 </svg>
             </div>
         </Modal.Body>
+      </Modal>
+    </>
+    <>
+
+      <Modal
+        show={bag}
+        onHide={handleClose}
+        backdrop="static"
+        keyboard={false}
+      >
+        <Modal.Header closeButton>
+          <Modal.Title>ADDED TO BAG</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          You just added a new item to your bag
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleClose}>
+            KEEP SHOPPING
+          </Button>
+          <Button variant="primary">GO TO BAG</Button>
+        </Modal.Footer>
       </Modal>
     </>
         </div>

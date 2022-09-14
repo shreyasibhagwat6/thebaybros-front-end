@@ -28,7 +28,7 @@ const Home = () => {
 
     return (
         <div className="home">
-            <Header />
+            {/* <Header /> */}
             <div className="home__carousel">
                 {carouselImages.map((image, index) => {
                     return (

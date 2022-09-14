@@ -1,5 +1,5 @@
 import "./Header.scss";
-import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
+// import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import React, { useState } from "react";
 import StyledSlider from "../StyledSlider/StyledSlider";
 import Modal from "react-bootstrap/Modal";
@@ -243,10 +243,10 @@ const Header = () => {
             </Modal>
             <div className="header">
                 <div className="header__title">
-                    <IoIosArrowBack
+                    {/* <IoIosArrowBack
                         style={{ color: "black" }}
                         fontSize="25px"
-                    />
+                    /> */}
                     <h5 className="header__heading">
                         WOMEN'S PANTS & LEGGINGS
                     </h5>
@@ -266,18 +266,18 @@ const Header = () => {
                     </div>
                 </div>
                 <div className="header__black-bar">
-                    <IoIosArrowBack
+                    {/* <IoIosArrowBack
                         style={{ color: "white" }}
                         fontSize="30px"
-                    />
+                    /> */}
                     <p className="header__text">
                         Sign up for HB Mastercard & get up to 15% off first day
                         purchases
                     </p>
-                    <IoIosArrowForward
+                    {/* <IoIosArrowForward
                         style={{ color: "white" }}
                         fontSize="30px"
-                    />
+                    /> */}
                 </div>
             </div>
         </>
