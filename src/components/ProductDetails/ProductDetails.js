@@ -1,6 +1,7 @@
 import React, { useParams, useState, useEffect } from 'react';
 import Modal from 'react-bootstrap/Modal';
 import Table from 'react-bootstrap/Table';
+import Button from 'react-bootstrap/Button';
 import ImageSlider from '../ImageSlider/ImageSlider';
 import './ProductDetails.scss';
 import snip from '../../assets/images/snip.JPG'
@@ -11,6 +12,7 @@ const ProductDetails = () => {
     const [product, setProduct] = useState('');
     // const [modal, setModal] = useState(false);
     const [show, setShow] = useState(false);
+    const [bag, setBag] = useState(false);
     const values = [true];
     const [fullscreen, setFullscreen] = useState(true);
 
@@ -18,6 +20,10 @@ const ProductDetails = () => {
         setFullscreen(breakpoint);
         setShow(true);
     }
+
+    const handleBag = () => setBag(true);
+    const handleClose = () => setBag(false);
+    
 
     const slides = [
         { url: "http://localhost:8080/image/jeans_jeans1.jpg", title: "beach" },
@@ -152,7 +158,7 @@ const ProductDetails = () => {
                 {/* {product.product_details.split(".")} */}
                 {/* {productArray[0]} */}
             </div>
-            <button className='bag'>ADD TO BAG</button>
+            <button onClick={handleBag} className='bag'>ADD TO BAG</button>
             <>
       <Modal show={show} fullscreen={fullscreen} onHide={() => setShow(false)}>
         <Modal.Header closeButton>
@@ -238,6 +244,28 @@ const ProductDetails = () => {
                 </svg>
             </div>
         </Modal.Body>
+      </Modal>
+    </>
+    <>
+
+      <Modal
+        show={bag}
+        onHide={handleClose}
+        backdrop="static"
+        keyboard={false}
+      >
+        <Modal.Header closeButton>
+          <Modal.Title>ADDED TO BAG</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          You just added a new item to your bag
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleClose}>
+            KEEP SHOPPING
+          </Button>
+          <Button variant="primary">GO TO BAG</Button>
+        </Modal.Footer>
       </Modal>
     </>
         </div>
