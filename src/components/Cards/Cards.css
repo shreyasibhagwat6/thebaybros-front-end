@@ -1,0 +1,36 @@
+.cards {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+  margin: 0;
+}
+.cards__card {
+  width: 45%;
+  flex: 2;
+}
+.cards__image {
+  width: 130%;
+  height: 60%;
+  margin-bottom: 0.5rem;
+}
+.cards__brand {
+  margin: 0;
+  font-weight: 700;
+  text-align: center;
+  width: 90%;
+}
+.cards__name {
+  margin: 0;
+  width: 90%;
+  text-align: center;
+}
+.cards__price {
+  margin: 0;
+  text-align: center;
+  width: 80%;
+}
+.cards__link {
+  text-decoration: none;
+  width: 50%;
+  color: black;
+}/*# sourceMappingURL=Cards.css.map */

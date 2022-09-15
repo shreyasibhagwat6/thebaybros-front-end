@@ -1,5 +1,6 @@
 import "./Home.scss";
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import Cards from "../../components/Cards/Cards";
 import axios from "axios";
 import { PRODUCTS_API } from "../../Utilities/api_links";
@@ -44,6 +45,7 @@ const Home = () => {
             <div className="home__cards">
                 {products.map((product) => {
                     return (
+                        // <Link to="/details"> 
                         <Cards
                             key={product.id}
                             image={product.product_image}
@@ -51,6 +53,7 @@ const Home = () => {
                             name={product.product_name}
                             price={product.price}
                         />
+                        // </Link>
                     );
                 })}
             </div>
