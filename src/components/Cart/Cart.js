@@ -19,24 +19,26 @@ export const Cart = () => {
 
   return (
     <div>
-        <div className='cart'>My Bag</div>
+        <div className='cart'>
+            <h4 className='cart__title'>My Bag</h4>
+        </div>
         <div className='cart__header'>
             <p>PURCHASE(1)</p>
             <p>WISHLIST</p>
         </div>
-        <div>Sold by The Bay</div>
+        <div className='cart__text'>Sold by The Bay</div>
         <div className= 'cart__cart'>
             <img className='cart__img' src={image}></img>
             <div className='cart__info'>
                 <h5>Free People</h5>
-                <p>izzy Mid-Rise Raw Edge Flare Jeans</p>
+                <p>Izzy Mid-Rise Raw Edge Flare Jeans</p>
                 <p>THE WEST, 26</p>
                 <p>$ 198</p>
                 <p>Return Policy</p>
-                <div className='qty'>
-                    <HiOutlineMinusSm onClick={minusOne} className='qty__minus' fontSize='2rem'/>
-                    <div className='qty__item'>{number}</div>
-                    <BsPlus onClick={addOne} className='qty__plus' fontSize='2rem'/>
+                <div className='cart__div'>
+                    <HiOutlineMinusSm onClick={minusOne} className='cart__minus' fontSize='2rem'/>
+                    <div className='cart__item'>{number}</div>
+                    <BsPlus onClick={addOne} className='cart__plus' fontSize='2rem'/>
                 </div>
                 <div>$198</div>
             </div>
