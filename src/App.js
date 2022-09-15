@@ -12,7 +12,7 @@ function App() {
                     <Route path="/" exact component={Home}></Route>
                 </Switch>
             </BrowserRouter>
-            <Footer />
+            <Footer className="mainFooter" />
         </>
     );
 }

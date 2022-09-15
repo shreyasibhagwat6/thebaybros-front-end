@@ -10,24 +10,36 @@ const Footer = () => {
     return (
         <div className="footer">
             <div className="footer__home">
-                <img src={home} alt="home icon" />
-                <p>Home</p>
+                <img className="footer__icon" src={home} alt="home icon" />
+                <p className="footer__text">Home</p>
             </div>
             <div className="footer__shop">
-                <img src={shop} alt="shop icon" />
-                <p>Shop</p>
+                <img className="footer__icon" src={shop} alt="shop icon" />
+                <p className="footer__text">Shop</p>
             </div>
             <div className="footer__search">
-                <img src={search} alt="search icon" />
-                <p>Shop</p>
+                <img
+                    className="footer__icon footer__search"
+                    src={search}
+                    alt="search icon"
+                />
+                <p className="footer__text">Search</p>
             </div>
             <div className="footer__account">
-                <img src={user} alt="user icon" />
-                <p>Account</p>
+                <img
+                    className="footer__icon footer__user"
+                    src={user}
+                    alt="user icon"
+                />
+                <p className="footer__text">Account</p>
             </div>
             <div className="footer__bag">
-                <img src={bag} alt="bag icon" />
-                <p>Bag</p>
+                <img
+                    className="footer__icon footer__bag"
+                    src={bag}
+                    alt="bag icon"
+                />
+                <p className="footer__text">Bag</p>
             </div>
         </div>
     );

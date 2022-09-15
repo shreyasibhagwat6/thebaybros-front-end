@@ -4,7 +4,6 @@ import React, { useState } from "react";
 import StyledSlider from "../StyledSlider/StyledSlider";
 import Modal from "react-bootstrap/Modal";
 import { Button } from "react-bootstrap";
-import Footer from "../Footer/Footer";
 
 const Header = () => {
     const [fullscreen, setFullscreen] = useState(true);
@@ -60,14 +59,18 @@ const Header = () => {
                     <Modal.Title>FILTER</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
-                    <p>Price Range</p>
-                    <div className="header__modal-price">
-                        <p>$5</p>
-                        <p>Unlimited</p>
+                    <div className="header__modal-price-div">
+                        <p className="header__modal-heading">Price Range</p>
+                        <div className="header__modal-price">
+                            <p>$5</p>
+                            <p>Unlimited</p>
+                        </div>
+                        <StyledSlider />
                     </div>
-                    <StyledSlider />
                     <div className="header__modal-colors">
-                        <p>Colours</p>
+                        <p className="header__modal-heading header__modal-heading-color">
+                            Colours
+                        </p>
                         <div className="header__colors">
                             {sizes.map((size, index) => {
                                 return (
@@ -84,7 +87,7 @@ const Header = () => {
                         </div>
                     </div>
                     <div className="header__modal-sizes">
-                        <p>Sizes</p>
+                        <p className="header__modal-heading">Sizes</p>
                         <div className="header__sizes">
                             {sizes.map((size, index) => {
                                 return (
@@ -99,7 +102,7 @@ const Header = () => {
                         </div>
                     </div>
                     <div className="header__modal-fit">
-                        <p>Preferred Fit</p>
+                        <p className="header__modal-heading">Preferred Fit</p>
                         <div className="header__fits">
                             {fits.map((fit, index) => {
                                 return (
@@ -114,7 +117,7 @@ const Header = () => {
                         </div>
                     </div>
                     <div className="header__modal-materials">
-                        <p>Material</p>
+                        <p className="header__modal-heading">Material</p>
                         <div className="header__materials">
                             {materials.map((material, index) => {
                                 return (
@@ -129,7 +132,7 @@ const Header = () => {
                         </div>
                     </div>
                     <div className="header__modal-brands">
-                        <p>Brands</p>
+                        <p className="header__modal-heading">Brands</p>
                         <div className="header__brands">
                             {brands.map((brand, index) => {
                                 return (
@@ -146,11 +149,15 @@ const Header = () => {
                     <Button
                         variant="dark"
                         size="lg"
-                        style={{ width: "100%", marginBottom: "2rem" }}
+                        style={{
+                            width: "90%",
+                            marginBottom: "2rem",
+                            marginLeft: "1.3rem",
+                            marginTop: "1.7rem",
+                        }}
                     >
                         SHOW ITEMS (103)
                     </Button>
-                    <Footer />
                 </Modal.Body>
             </Modal>
             <Modal
@@ -234,7 +241,12 @@ const Header = () => {
                         <Button
                             variant="dark"
                             size="lg"
-                            style={{ width: "100%", marginBottom: "2rem" }}
+                            style={{
+                                width: "90%",
+                                marginBottom: "2rem",
+                                marginLeft: "1.3rem",
+                                marginTop: "1rem",
+                            }}
                         >
                             SORT MY ITEMS
                         </Button>
@@ -252,7 +264,7 @@ const Header = () => {
                     </h5>
                 </div>
                 <div className="header__info">
-                    <p>2,704 Items</p>
+                    <p className="header__items">2,704 Items</p>
                     <div className="header__buttons">
                         <button className="header__filter" onClick={handleShow}>
                             Filter
