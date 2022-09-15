@@ -1,5 +1,18 @@
 .footer {
-    border-top: 1px solid #686868;
+    border-top: 1px solid black;
     display: flex;
     justify-content: space-around;
+
+    &__icon {
+        margin-left: 0.5rem;
+        margin-top: 1.5rem;
+    }
+
+    &__bag {
+        margin-left: 0.2rem;
+    }
+
+    &__user {
+        margin-left: 1.2rem;
+    }
 }

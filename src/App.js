@@ -9,17 +9,17 @@ import Cart from "./components/Cart/Cart";
 
 function App() {
     return (
-      <>
-      <Header />
-        <BrowserRouter>
-            <Switch>
-                <Route path="/" exact component={Home}></Route>
-                <Route path="/details" exact component={Details}></Route>
-                <Route path="/cart" exact component={Cart}></Route>
-            </Switch>
-        </BrowserRouter>
-      <Footer /> 
-      </>
+        <>
+            <Header />
+            <BrowserRouter>
+                <Switch>
+                    <Route path="/" exact component={Home}></Route>
+                    <Route path="/details" exact component={Details}></Route>
+                    <Route path="/cart" exact component={Cart}></Route>
+                </Switch>
+            </BrowserRouter>
+            <Footer />
+        </>
     );
 }
 

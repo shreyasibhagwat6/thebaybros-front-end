@@ -2,16 +2,19 @@
     display: flex;
     justify-content: space-between;
     width: 50%;
+    height: 45%;
     margin: 0;
 
     &__card {
-        width: 45%;
+        width: 35%;
+        height: 35%;
         flex: 2;
+        margin-bottom: 1.5rem;
     }
 
     &__image {
-        width: 130%;
-        height: 60%;
+        width: 175%;
+        height: 350%;
         margin-bottom: 0.5rem;
     }
 
