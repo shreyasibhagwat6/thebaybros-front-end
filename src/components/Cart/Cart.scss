@@ -1,0 +1,105 @@
+.cart{
+    display: flex;
+    justify-content: center;
+    border-bottom: 2px solid #DDDDDD;
+
+    &__title{
+        font-weight: bold;
+        padding: 1rem;
+    }
+
+    &__header{
+        display: flex;
+        justify-content: space-around;
+        padding-top: 1rem;
+        border-bottom: 2px solid #DDDDDD;
+    }
+
+    &__cart{
+        display: flex;
+        justify-content: space-around;
+        margin: 1rem;
+    }
+
+    &__text{
+        padding: 1rem;
+        border-bottom: 2px solid #DDDDDD;
+    }
+
+    &__img{
+        width: 30%;
+    }
+
+    &__ship{
+        display: flex;
+        border: 2px solid #DDDDDD;
+        padding: 1rem 0;
+    }
+
+    &__one{
+        width: 50%;
+    }
+
+    &__input{
+        margin: 0 1rem;
+    }
+
+    &__promo{
+        display: flex;
+        margin: 15rem 0 1rem 1rem;
+    }
+
+    &__checkout{
+        background-color: black;
+        color: white;
+        padding: 1rem;
+        border: black;
+        width: 80%;
+        height: 3rem;
+        padding: 0.3rem;
+        border-radius: 0.5rem;
+        margin: 1.8rem;
+
+    }
+
+    &__code{
+        width: 50%;
+    }
+
+    &__total{
+        margin: 2.5rem 0 0 3rem;
+    }
+
+    &__button{
+        background-color: black;
+        color: white;
+        padding: 1rem;
+        border: black;
+        width: 80%;
+        height: 3rem;
+        padding: 0.3rem;
+        border-radius: 0.5rem;
+        margin: 1.8rem;
+    }
+
+    &__div{
+        display: flex;
+        padding-bottom: 1rem;
+    }
+
+    &__item{
+        border: 2px solid #AAAAAA;
+        padding: 0.2rem 0.7rem;
+    }
+
+    &__plus{
+        border: 2px solid #AAAAAA;
+        height: 2.2rem;
+    }
+
+    &__minus{
+        border: 2px solid #AAAAAA;
+        height: 2.2rem;
+    }
+}
+

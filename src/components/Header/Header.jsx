@@ -1,9 +1,11 @@
 import "./Header.scss";
-import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
+// import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import React, { useState } from "react";
 import StyledSlider from "../StyledSlider/StyledSlider";
 import Modal from "react-bootstrap/Modal";
 import { Button } from "react-bootstrap";
+import Footer from "../Footer/Footer";
+import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
 const Header = () => {
     const [fullscreen, setFullscreen] = useState(true);

@@ -1,0 +1,180 @@
+.product{
+    padding: 0 2rem;
+}
+
+.app{
+    flex: 50;
+    border: solid black;
+    background-color: #51619C;
+}
+
+.img2{
+    flex: 50;
+    border: solid black;
+    align-items: center;
+}
+
+
+.size {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    &__num--one {
+        flex: 50;
+        border: solid black;
+        text-align: center;
+    }
+
+    
+    &__num--one:active {
+        flex: 50;
+        border: solid black;
+        text-align: center;
+        background-color: #51619C;
+    }
+
+    &__text{
+        display: flex;
+        flex: 50;
+        text-align: center;
+    }
+
+    &__title {
+        flex: 50;
+        color: white;
+        padding: 0.5rem;
+    } 
+    
+    &__container {
+        display: flex;
+        background-color: #51619C;
+        border-radius: 0.5rem;
+    }
+
+    &__arrow {
+        height: 3rem;
+        color: white;
+        width: 2rem;
+        padding: 1rem;
+    }
+}
+
+.measure{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__cont {
+        flex: 20;
+        text-align: center;
+
+        &--inch{
+            border-bottom: 2px solid #51619C;
+        }
+    }
+}
+
+.review{
+    display: flex;
+    background-color: black;
+    color: white;
+    width: 90%;
+    height: 3rem;
+    padding: 0.3rem;
+    border-radius: 0.5rem;
+    margin: 0 auto;
+
+    &__num{
+        flex: 20;
+    }
+
+    &__star{
+        flex: 50;
+    }
+}
+
+.ship{
+    display: flex;
+    background-color: #F6F6F6;
+    margin: 2rem 0;
+
+    &__text{
+        margin-left: 1rem;
+    }
+}
+
+.gift{
+    display: flex;
+    margin: 2rem 0;
+}
+
+.colour{
+    margin: 2rem 0;
+}
+
+.bag{
+    background-color: black;
+    color: white;
+    padding: 1rem;
+    border: black;
+    width: 80%;
+    height: 3rem;
+    padding: 0.3rem;
+    border-radius: 0.5rem;
+    margin: 1.8rem;
+    
+}
+
+.qty{
+    display: flex;
+    width: 22%;
+    justify-content: space-around;
+
+    &__title{
+        padding: 1rem 0;
+    }
+
+    &__minus {
+        flex: 1;
+    }
+
+    &__item{
+        padding: 0 1rem;
+        border: 2px solid black;
+        flex: 1;
+    }
+
+    &__plus {
+        width: 5rem;
+        flex: 1;
+    }
+}
+
+.deliver{
+    padding-top: 1rem;
+    border-bottom: 2px solid #EBEBEB;
+
+    &__ship{
+        border: 2px solid #D8D8D8;
+        padding: 1rem 0.5rem;
+        margin-bottom: 1rem;
+    }
+
+    &__pickup{
+        border: 2px solid #D8D8D8;
+        padding: 1rem 0.5rem;
+        margin-bottom: 1.5rem;
+    }
+}
+
+.details{
+    padding: 1rem 0;
+}
+
+.snip{
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
