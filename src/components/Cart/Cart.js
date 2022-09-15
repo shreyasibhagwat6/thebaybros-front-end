@@ -32,7 +32,7 @@ export const Cart = () => {
             <div className='cart__info'>
                 <h5>Free People</h5>
                 <p>Izzy Mid-Rise Raw Edge Flare Jeans</p>
-                <p>THE WEST, 26</p>
+                <p>THE WEST, 24</p>
                 <p>$ 198</p>
                 <p>Return Policy</p>
                 <div className='cart__div'>
