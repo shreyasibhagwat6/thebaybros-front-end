@@ -8,6 +8,7 @@ import snip from '../../assets/images/snip.JPG'
 import axios from 'axios';
 import { BsPlus } from 'react-icons/bs'
 import { HiOutlineMinusSm } from 'react-icons/hi';
+import { Link } from "react-router-dom";
 
 const ProductDetails = () => {
 
@@ -127,7 +128,6 @@ const ProductDetails = () => {
                 </div>
             </div>
             <div>
-                
                 <h5 className='qty__title'>Quantity</h5>
                 <div className='qty'>
                     <HiOutlineMinusSm onClick={minusOne} className='qty__minus' fontSize='2rem'/>
@@ -258,6 +258,7 @@ const ProductDetails = () => {
     <>
 
       <Modal
+        style={{width:'490px'}} 
         show={bag}
         onHide={handleClose}
         backdrop="static"
@@ -273,7 +274,9 @@ const ProductDetails = () => {
           <Button variant="secondary" onClick={handleClose}>
             KEEP SHOPPING
           </Button>
-          <Button variant="primary">GO TO BAG</Button>
+          <Link to= "/cart">
+          <Button variant='black'>GO TO BAG</Button>
+          </Link>
         </Modal.Footer>
       </Modal>
     </>

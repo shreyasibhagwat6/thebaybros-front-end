@@ -245,10 +245,10 @@ const Header = () => {
             </Modal>
             <div className="header">
                 <div className="header__title">
-                    {/* <IoIosArrowBack
+                    <IoIosArrowBack
                         style={{ color: "black" }}
                         fontSize="25px"
-                    /> */}
+                    />
                     <h5 className="header__heading">
                         WOMEN'S PANTS & LEGGINGS
                     </h5>

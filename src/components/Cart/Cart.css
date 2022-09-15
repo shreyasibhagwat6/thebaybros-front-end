@@ -1,0 +1,55 @@
+.cart {
+  margin: 0 auto;
+}
+.cart__header {
+  display: flex;
+}
+.cart__cart {
+  display: flex;
+  justify-content: space-around;
+  margin: 1rem;
+}
+.cart__img {
+  width: 30%;
+}
+.cart__ship {
+  display: flex;
+}
+.cart__one {
+  width: 50%;
+}
+.cart__input {
+  margin: 0 1rem;
+}
+.cart__promo {
+  display: flex;
+  margin: 15rem 0 1rem 1rem;
+}
+.cart__checkout {
+  background-color: black;
+  color: white;
+  padding: 1rem;
+  border: black;
+  width: 80%;
+  height: 3rem;
+  padding: 0.3rem;
+  border-radius: 0.5rem;
+  margin: 1.8rem;
+}
+.cart__code {
+  width: 50%;
+}
+.cart__total {
+  margin: 2.5rem 0 0 3rem;
+}
+.cart__button {
+  background-color: black;
+  color: white;
+  padding: 1rem;
+  border: black;
+  width: 80%;
+  height: 3rem;
+  padding: 0.3rem;
+  border-radius: 0.5rem;
+  margin: 1.8rem;
+}/*# sourceMappingURL=Cart.css.map */

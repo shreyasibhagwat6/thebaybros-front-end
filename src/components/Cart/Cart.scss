@@ -1,0 +1,68 @@
+.cart{
+    margin: 0 auto;
+
+    &__header{
+        display: flex;
+    }
+
+    &__cart{
+        display: flex;
+        justify-content: space-around;
+        margin: 1rem;
+    }
+
+    &__img{
+        width: 30%;
+    }
+
+    &__ship{
+        display: flex;
+    }
+
+    &__one{
+        width: 50%;
+    }
+
+    &__input{
+        margin: 0 1rem;
+    }
+
+    &__promo{
+        display: flex;
+        margin: 15rem 0 1rem 1rem;
+    }
+
+    &__checkout{
+        background-color: black;
+        color: white;
+        padding: 1rem;
+        border: black;
+        width: 80%;
+        height: 3rem;
+        padding: 0.3rem;
+        border-radius: 0.5rem;
+        margin: 1.8rem;
+
+    }
+
+    &__code{
+        width: 50%;
+    }
+
+    &__total{
+        margin: 2.5rem 0 0 3rem;
+    }
+
+    &__button{
+        background-color: black;
+        color: white;
+        padding: 1rem;
+        border: black;
+        width: 80%;
+        height: 3rem;
+        padding: 0.3rem;
+        border-radius: 0.5rem;
+        margin: 1.8rem;
+    }
+}
+
