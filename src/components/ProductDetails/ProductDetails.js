@@ -6,6 +6,9 @@ import ImageSlider from '../ImageSlider/ImageSlider';
 import './ProductDetails.scss';
 import snip from '../../assets/images/snip.JPG'
 import axios from 'axios';
+import { BsPlus } from 'react-icons/bs'
+import { HiOutlineMinusSm } from 'react-icons/hi';
+import { Link } from "react-router-dom";
 
 const ProductDetails = () => {
 
@@ -13,8 +16,10 @@ const ProductDetails = () => {
     // const [modal, setModal] = useState(false);
     const [show, setShow] = useState(false);
     const [bag, setBag] = useState(false);
+    const [number, setNumber] = useState(1);
     const values = [true];
     const [fullscreen, setFullscreen] = useState(true);
+    const [active, setActive] = useState('false');
 
     function handleShow(breakpoint) {
         setFullscreen(breakpoint);
@@ -42,9 +47,17 @@ const ProductDetails = () => {
             })
     }, [])
 
-    // const productArray = product.product_details.split(".");
+    const clickHandler = () => {
+        setActive(!active);
+    }
 
-    // console.log(productArray);
+    const addOne = () => {
+        setNumber(number+1);
+    }
+
+    const minusOne = () => {
+        setNumber(number-1)
+    }
 
     const containerStyles = {
         width: "500px",
@@ -53,7 +66,7 @@ const ProductDetails = () => {
       };
 
     return (
-        <div>
+        <div className='product'>
              <div style={containerStyles}>
                 <ImageSlider slides={slides} />
             </div>
@@ -104,26 +117,22 @@ const ProductDetails = () => {
                 </div>
                 <img className='snip' alt='' src={snip}></img>
                 <div className='size'>
-                    <div className='size__num'>24</div>
-                    <div className='size__num'>25</div>
-                    <div className='size__num'>26</div>
-                    <div className='size__num'>27</div>
-                    <div className='size__num'>28</div>
-                    <div className='size__num'>29</div>
-                    <div className='size__num'>30</div>
-                    <div className='size__num'>31</div>
+                    <div onClick={clickHandler} className={active ? 'img2': 'app'}>24</div>
+                    <div className='img2'>25</div>
+                    <div className='img2'>26</div>
+                    <div className='img2'>27</div>
+                    <div className='img2'>28</div>
+                    <div className='img2'>29</div>
+                    <div className='img2'>30</div>
+                    <div className='img2'>31</div>
                 </div>
             </div>
             <div>
                 <h5 className='qty__title'>Quantity</h5>
                 <div className='qty'>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-dash" viewBox="0 0 10 10">
-                        <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"/>
-                    </svg>
-                    <div className='qty__item'>1</div>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus" viewBox="0 0 10 10">
-                        <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
-                    </svg>
+                    <HiOutlineMinusSm onClick={minusOne} className='qty__minus' fontSize='2rem'/>
+                    <div className='qty__item'>{number}</div>
+                    <BsPlus onClick={addOne} className='qty__plus' fontSize='2rem'/>
                 </div>
             </div>
             <div className='deliver'>
@@ -249,6 +258,7 @@ const ProductDetails = () => {
     <>
 
       <Modal
+        style={{width:'490px'}} 
         show={bag}
         onHide={handleClose}
         backdrop="static"
@@ -264,7 +274,9 @@ const ProductDetails = () => {
           <Button variant="secondary" onClick={handleClose}>
             KEEP SHOPPING
           </Button>
-          <Button variant="primary">GO TO BAG</Button>
+          <Link to= "/cart">
+          <Button variant='black'>GO TO BAG</Button>
+          </Link>
         </Modal.Footer>
       </Modal>
     </>

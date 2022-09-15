@@ -1,0 +1,159 @@
+.product {
+  padding: 0 2rem;
+}
+
+.app {
+  flex: 50;
+  border: solid black;
+  background-color: #51619C;
+}
+
+.img2 {
+  flex: 50;
+  border: solid black;
+  align-items: center;
+}
+
+.size {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.size__num--one {
+  flex: 50;
+  border: solid black;
+  text-align: center;
+}
+.size__num--one:active {
+  flex: 50;
+  border: solid black;
+  text-align: center;
+  background-color: #51619C;
+}
+.size__text {
+  display: flex;
+  flex: 50;
+  text-align: center;
+}
+.size__title {
+  flex: 50;
+  color: white;
+  padding: 0.5rem;
+}
+.size__container {
+  display: flex;
+  background-color: #51619C;
+  border-radius: 0.5rem;
+}
+.size__arrow {
+  height: 3rem;
+  color: white;
+  width: 2rem;
+  padding: 1rem;
+}
+
+.measure {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.measure__cont {
+  flex: 20;
+  text-align: center;
+}
+.measure__cont--inch {
+  border-bottom: 2px solid #51619C;
+}
+
+.review {
+  display: flex;
+  background-color: black;
+  color: white;
+  width: 90%;
+  height: 3rem;
+  padding: 0.3rem;
+  border-radius: 0.5rem;
+  margin: 0 auto;
+}
+.review__num {
+  flex: 20;
+}
+.review__star {
+  flex: 50;
+}
+
+.ship {
+  display: flex;
+  background-color: #F6F6F6;
+  margin: 2rem 0;
+}
+.ship__text {
+  margin-left: 1rem;
+}
+
+.gift {
+  display: flex;
+  margin: 2rem 0;
+}
+
+.colour {
+  margin: 2rem 0;
+}
+
+.bag {
+  background-color: black;
+  color: white;
+  padding: 1rem;
+  border: black;
+  width: 80%;
+  height: 3rem;
+  padding: 0.3rem;
+  border-radius: 0.5rem;
+  margin: 1.8rem;
+}
+
+.qty {
+  display: flex;
+  width: 22%;
+  justify-content: space-around;
+}
+.qty__title {
+  padding: 1rem 0;
+}
+.qty__minus {
+  flex: 1;
+}
+.qty__item {
+  padding: 0 1rem;
+  border: 2px solid black;
+  flex: 1;
+}
+.qty__plus {
+  width: 5rem;
+  flex: 1;
+}
+
+.deliver {
+  padding-top: 1rem;
+  border-bottom: 2px solid #EBEBEB;
+}
+.deliver__ship {
+  border: 2px solid #D8D8D8;
+  padding: 1rem 0.5rem;
+  margin-bottom: 1rem;
+}
+.deliver__pickup {
+  border: 2px solid #D8D8D8;
+  padding: 1rem 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.details {
+  padding: 1rem 0;
+}
+
+.snip {
+  width: 100%;
+  margin-bottom: 2rem;
+}/*# sourceMappingURL=ProductDetails.css.map */

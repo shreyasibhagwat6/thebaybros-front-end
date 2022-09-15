@@ -1,19 +1,21 @@
 import { useState } from "react";
+import { X } from "react-bootstrap-icons";
 
 const slideStyles = {
-  width: "100%",
+  width: "80%",
   height: "100%",
   borderRadius: "10px",
   backgroundSize: "contain",
   backgroundRepeat: 'no-repeat',
   backgroundPosition: "center",
+  margin: "0 !important",
 };
 
 const rightArrowStyles = {
   position: "absolute",
   top: "50%",
   transform: "translate(0, -50%)",
-  right: "32px",
+  right: "100px",
   fontSize: "45px",
   zIndex: 1,
   cursor: "pointer",
