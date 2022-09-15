@@ -23,7 +23,7 @@ export const Cart = () => {
             <h4 className='cart__title'>My Bag</h4>
         </div>
         <div className='cart__header'>
-            <p>PURCHASE(1)</p>
+            <p>PURCHASE({number})</p>
             <p>WISHLIST</p>
         </div>
         <div className='cart__text'>Sold by The Bay</div>
@@ -40,7 +40,7 @@ export const Cart = () => {
                     <div className='cart__item'>{number}</div>
                     <BsPlus onClick={addOne} className='cart__plus' fontSize='2rem'/>
                 </div>
-                <div>$198</div>
+                <div>${number*198.00}.00</div>
             </div>
         </div>
         <div className='cart__ship'>
@@ -57,7 +57,7 @@ export const Cart = () => {
             <div className='cart__code'>
                 <button className='cart__button'>+ PROMO CODE</button>
             </div>
-            <p className='cart__total'>Subtotal: $198.00</p>
+            <p className='cart__total'>Subtotal:${number*198.00}.00</p>
         </div>
         <button className='cart__checkout'>CHECKOUT</button>
     </div>
